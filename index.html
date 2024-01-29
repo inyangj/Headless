@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script type="module" src="./tailwindconfig.js" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <title>Headless HR</title>
+</head>
+<body>
+    <section class="relative">
+        <aside class="bg-[#F5F8FA] h-screen w-[17.75rem] fixed pt-[5.56rem]">
+
+            <div class="w-[17.75rem] border border-gray4"></div>
+
+            <div class="flex flex-col  gap-3 mt-8 bg-primaryWhite w-[12.75rem] border border-gray4 rounded-[0.5rem] mx-auto">
+                
+                <h1 class="font-bold pl-6 pt-[0.81rem] ">User Name</h1>
+                <p class="text-[#8F9499] pl-6 pb-3">1 Member</p>
+                <div class="border border-gray4""></div>
+
+                <div class="pl-6 py-3 font-bold flex gap-[1.13rem]"><img src="./assets/member.svg" alt="member-Icon"> <p>Assign Member</p></div>
+                
+            </div>
+            
+            <ul class="flex flex-col  gap-3 mt-12 mb-10 w-[12.75rem] mx-auto ">
+                <li class="flex gap-[1.13rem] bg-[#B4A3F824] py-2 px-4 rounded-[1.5rem] text-[#6145D0]"><img src="./assets/Home.svg" alt="Home-Icon"> Home</li>
+                <li class="flex py-2 px-4 gap-[1.13rem] hover:text-[#6145D0]"><img src="./assets/settings.svg" alt="settings-Icon">Settings</li>
+                <li class="flex py-2 px-4 gap-[1.13rem] hover:text-[#6145D0]"><img src="./assets/support.svg" alt="support-Icon">Support</li>
+            </ul>
+
+            <div class="w-[11.6875rem] mx-auto border border-gray4"></div>
+
+            <p class="mt-10 mx-auto w-[11.6875rem]">Free trial <span class="text-[#6145D0] font-semibold">Upgrade</span></p>
+        </aside>
+
+        <main class="ml-[17.75rem]">
+            <div class="mx-[5rem]">
+                <div class="flex justify-between pt-[2.81rem]">
+                    <h1 class="text-[1.25rem] font-semibold">Organization</h1>
+                    <img src="./assets/img.png" alt="profile-image">
+                </div>
+
+
+                <div class="flex justify-between pt-[5.37rem] pb-10">
+                    <h2 class="text-[1.25rem] font-semibold">Welcome [Name of user]</h2>
+
+                    <div class="rounded-[0.25rem] border border-[#CED6DE] xl:w-[28.3rem] flex items-center gap-2">
+                        <img src="./assets/search.svg" alt="search-icon">
+                        <input type="text " placeholder="Search organization" 
+                        class="w-full bg-inherit outline-none ">
+                    </div>
+
+                </div>
+
+                <div class="border border-gray4"></div>
+
+                <div class="w-[26.8rem] my-[9.5rem] mx-auto flex flex-col justify-center items-center">
+                    <img src="./assets/empty.png" alt="icon">
+                    <h3 class="pt-2 text-center text-[1.25rem] w-[19.87rem] pb-1 text-[1.25rem] font-bold">You currently have no organization listed here.</h3>
+                    <p class="text-[0.875rem]">You will see list of organization that you have created or invited to</p>
+                    <button class="bg-[#6145D0] text-white rounded-[0.25rem] mt-4 px-6 py-2 openModal">Create Organization</button>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+    </section>
+
+
+
+
+      <div
+      id="CreateModal"
+      class="modal hidden fixed inset-0 bg-black bg-opacity-50 z-50"
+    >
+      <div
+        class="modal-content w-fit bg-white mx-auto mt-10 p-2 md:p-6 rounded-md"
+      >
+      <div id="closeModal" class="flex justify-end mt-4 md:mt-8">
+        <img src="./assets/close.svg" alt="close-icon"></div>
+      <div class=" CONTAINER place-self-center mx-4 lg:mx-[3.5rem] xl:mx-[4.5rem] my-6 lg:mb-[4.5rem] xl:mb-[7rem] flex flex-col gap-[3rem] ">
+
+        <div>
+            <h3 class="text-[1.625rem] font-semibold">Create an organisation</h3>
+            <p class="text-[0.875rem]">Kindly fill the information to add an organization</p>
+        </div>
+        
+
+            <form action="" class="grid gap-4">
+              <div>
+                <label for="name" class="font-semibold mb-4">Organisation Name</label>
+                <input type="text" class="w-full fade" name="name" id="name" placeholder="Enter name of your organisation">
+              </div>
+              <div>
+                <label class="font-semibold mb-4" for="email">Email Address</label>
+                <input type="email" class="w-full fade" name="email" id="email" placeholder="Your email address">
+              </div>
+              <div>
+                <label for="description" class="font-semibold mb-4">Description</label>
+                <textarea name="description" placeholder="Tell us about your services" class="w-full fade" id="" cols="30" rows="3"></textarea>
+              </div>
+              <button type="submit" class="cta font-semibold py-5 text-renaissance_white bg-[#1A1A1A] sales w-full">CONTACT SALES</button>
+            </form>
+          </div>
+        
+      </div>
+    </div>
+    </div> 
+    
+
+
+    <script src="./createModal.js"></script>
+    <script src="./tailwindConfig.js"></script>
+</body>
+</html>
